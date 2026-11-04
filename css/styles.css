@@ -26,3 +26,101 @@
     border-radius: 6px;
   }
 }
+/*COMPONENTS (las clases)*/
+@layer components {
+  /*Disco de vinilo (surcos + brillo (::before) + agujero (::after))*/
+  .vinilo {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: repeating-radial-gradient(
+      circle,
+      #1d1a17 0 1.5px,
+      #0c0b09 1.5px 3.5px
+    );
+    box-shadow: 0 16px 32px var(--color-sombra);
+  }
+  .vinilo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(
+      from 20deg,
+      transparent 0 8%,
+      rgb(255 255 255 / 0.16) 13%,
+      transparent 20% 56%,
+      rgb(255 255 255 / 0.1) 62%,
+      transparent 70%
+    );
+  }
+  .vinilo::after {
+    content: "";
+    position: absolute;
+    left: 48%;
+    top: 48%;
+    width: 4%;
+    height: 4%;
+    border-radius: 50%;
+    background: var(--color-fondo);
+  }
+
+  /*Etiqueta central del disco*/
+  .etiqueta {
+    position: absolute;
+    inset: 31%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6%;
+    text-align: center;
+    font-family: var(--font-titulo);
+    font-size: 0.7rem;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  /*Animaciones*/
+  .girar {
+    animation: girar 4s linear infinite;
+  }
+  .entra-disco {
+    animation: entra-disco 1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+  .cinta {
+    animation: cinta 38s linear infinite;
+  }
+}
+
+/*ANIMACIONES (fuera de capas para que no compitan)*/
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes entra-disco {
+  from {
+    transform: translateX(-38%) rotate(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes cinta {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .girar,
+  .entra-disco,
+  .cinta {
+    animation: none;
+  }
+}
+
+/* (Seguramente falte AOS)*/
