@@ -10,6 +10,7 @@
     />
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
 
+    <!--Modo oscuro guardado-->
     <script>
       if (localStorage.getItem("tema") === "oscuro")
         document.documentElement.classList.add("dark");
@@ -42,6 +43,33 @@
     <!--Sistema de diseño (SOFI)-->
     <style type="text/tailwindcss">
       @custom-variant dark (&:where(.dark, .dark *));
+
+      @theme static {
+        /*Tipografías*/
+        --font-titulo: "Bowlby One SC", sans-serif;
+        --font-cuerpo: "Inter", sans-serif;
+
+        /*Colores de marca*/
+        --color-rojo: #d62b1a;
+        --color-rojo-oscuro: #a81f10;
+        --color-ocre: #f2b233;
+        --color-tinta: #141210;
+        --color-crema: #fff8ea;
+        --color-papel: #faf7f0;
+        --color-azul: #1f4ba5;
+        --color-verde: #2e6b4f;
+
+        /*Colores por función (cambian en modo oscuro en styles.css)*/
+        --color-fondo: #e8e6e2;
+        --color-tarjeta: #f8f7f4;
+        --color-panel: #f1efeb;
+        --color-texto: #141210;
+        --color-tenue: #57534d;
+        --color-sombra: rgb(20 18 16 / 0.22);
+
+        /*Sombras*/
+        --shadow-suave: 5px 5px 20px var(--color-sombra);
+      }
     </style>
   </head>
 
@@ -68,7 +96,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <!--JavaScript propio-->
+    <!--JavaScript propio (siempre después)-->
     <script src="js/interfaz.js"></script>
     <script src="js/librerias.js"></script>
   </body>
