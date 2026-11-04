@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ziggy Discos · Tienda de discos en La Latina, Madrid</title>
+    <meta
+      name="description"
+      content="Vinilos nuevos y de segunda mano en el centro de Madrid."
+    />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+
+    <script>
+      if (localStorage.getItem("tema") === "oscuro")
+        document.documentElement.classList.add("dark");
+    </script>
+
+    <!--Tipografías-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Bowlby+One+SC&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!--CSS de las librerías-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+
+    <!--CSS propio-->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!--Tailwind desde el CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!--Sistema de diseño (SOFI)-->
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:where(.dark, .dark *));
+    </style>
+  </head>
+
+  <body class="bg-fondo font-cuerpo text-texto">
+    <!--CABECERA (SOFI)-->
+
+    <main class="bg-fondo">
+      <!--PORTADA (SOFI)-->
+
+      <!--Cinta de géneros (VICKY)-->
+
+      <!--Azulejos de género (VICKY)-->
+
+      <!--PRODUCTOS: CATÁLOGO (VICKY)-->
+
+      <!--HORARIO Y UBICACIÓN: LA TIENDA (SERGIO)-->
+
+      <!--NOVEDADES: FERIAS (SERGIO)-->
+    </main>
+
+    <!--FOOTER (SERGIO)-->
+
+    <!--Librerías-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!--JavaScript propio-->
+    <script src="js/interfaz.js"></script>
+    <script src="js/librerias.js"></script>
+  </body>
+</html>
