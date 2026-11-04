@@ -1,0 +1,28 @@
+/* Ziggy Discos (CSS propio)
+
+/*-BASE: etiquetas y modo oscuro-*/
+@layer base {
+  /* Modo oscuro*/
+  .dark {
+    --color-fondo: #141312;
+    --color-tarjeta: #252321;
+    --color-panel: #1c1b19;
+    --color-texto: #f1efeb;
+    --color-tenue: #ada89f;
+    --color-sombra: rgb(255 244 225 / 0.1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-rojo);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
