@@ -2,7 +2,23 @@
 
 $(function () {
   //-Swiper: carrusel de discos del catálogo-
-
+  
+    const carrusel = new Swiper(".catalogo", {
+    effect: "coverflow",
+    centeredSlides: true,
+    grabCursor: true,
+    slidesPerView: 1.5,
+    coverflowEffect: { rotate: 0, depth: 180, slideShadows: false },
+    pagination: { el: ".swiper-pagination", clickable: true },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: { slidesPerView: 2.5 },
+      1024: { slidesPerView: 3.5 },
+    },
+  });
   //-jQuery: filtro por género-
 
   //-jQuery: botón "Me apunto" de las ferias-
