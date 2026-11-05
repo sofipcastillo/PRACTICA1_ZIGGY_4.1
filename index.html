@@ -152,6 +152,25 @@
             />
           </svg>
         </button>
+
+        <button
+          id="boton-menu"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="menu"
+          class="group flex size-11 flex-col items-center justify-center gap-1.5 rounded-xl bg-tarjeta text-texto shadow-suave transition-colors hover:text-rojo focus-visible:text-rojo aria-expanded:bg-rojo aria-expanded:text-crema md:hidden"
+        >
+          <span
+            class="h-[1px] w-5 rounded-sm bg-current transition-transform group-aria-expanded:translate-y-[9px] group-aria-expanded:rotate-45"
+          ></span>
+          <span
+            class="h-[1px] w-5 rounded-sm bg-current transition-opacity group-aria-expanded:opacity-0"
+          ></span>
+          <span
+            class="h-[1px] w-5 rounded-sm bg-current transition-transform group-aria-expanded:-translate-y-[9px] group-aria-expanded:-rotate-45"
+          ></span>
+        </button>
       </div>
     </header>
 
