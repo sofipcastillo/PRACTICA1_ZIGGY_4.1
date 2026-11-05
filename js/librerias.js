@@ -2,7 +2,7 @@
 
 $(function () {
   //-Swiper: carrusel de discos del catálogo-
-  
+
     const carrusel = new Swiper(".catalogo", {
     effect: "coverflow",
     centeredSlides: true,
@@ -19,7 +19,34 @@ $(function () {
       1024: { slidesPerView: 3.5 },
     },
   });
+
   //-jQuery: filtro por género-
+
+  const $carril = $(".catalogo .swiper-wrapper");
+  const $discos = $carril.children(".swiper-slide");
+
+  $(".filtro").on("click", function () {
+    const genero = $(this).data("genero");
+
+    $(".filtro").attr("aria-pressed", "false");
+    $(this).attr("aria-pressed", "true");
+
+    $discos.detach();
+    $discos
+      .filter(function () {
+        return genero === "todos" || $(this).data("genero") === genero;
+      })
+      .appendTo($carril);
+
+    carrusel.update();
+    carrusel.slideTo(0, 0);
+  });
+
+    // Azulejos activan filtro correspondiente
+  $(".azulejo").on("click", function () {
+    $('.filtro[data-genero="' + $(this).data("genero") + '"]').trigger("click");
+  });
+
 
   //-jQuery: botón "Me apunto" de las ferias-
 
