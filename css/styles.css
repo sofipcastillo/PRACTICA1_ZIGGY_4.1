@@ -123,4 +123,10 @@
   }
 }
 
+/* -Swiper- */
+.swiper {
+  --swiper-theme-color: var(--color-rojo);
+  --swiper-pagination-bullet-inactive-color: var(--color-tenue);
+}
+
 /* (Seguramente falte AOS)*/
