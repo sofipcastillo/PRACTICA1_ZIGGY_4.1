@@ -265,9 +265,316 @@
 
       <!--Cinta de géneros (VICKY)-->
 
-      <!--Azulejos de género (VICKY)-->
+       <div
+        class="overflow-hidden bg-rojo py-4 font-titulo text-lg whitespace-nowrap text-crema uppercase lg:text-2xl"
+        aria-hidden="true"
+      >
+        <div class="cinta flex w-max">
 
+          <div class="flex items-center gap-7 pr-7">
+            <span>Rock</span><span class="text-ocre">●</span><span>Indie</span
+            ><span class="text-ocre">●</span><span>Electrónica</span
+            ><span class="text-ocre">●</span><span>Españoles 80s</span
+            ><span class="text-ocre">●</span><span>Soul</span
+            ><span class="text-ocre">●</span><span>Latina</span
+            ><span class="text-ocre">●</span><span>Nuevo y segunda mano</span
+            ><span class="text-ocre">●</span><span>Ferias de vinilo</span
+            ><span class="text-ocre">●</span>
+          </div>
+
+          <div class="flex items-center gap-7 pr-7">
+            <span>Rock</span><span class="text-ocre">●</span><span>Indie</span
+            ><span class="text-ocre">●</span><span>Electrónica</span
+            ><span class="text-ocre">●</span><span>Españoles 80s</span
+            ><span class="text-ocre">●</span><span>Soul</span
+            ><span class="text-ocre">●</span><span>Latina</span
+            ><span class="text-ocre">●</span><span>Nuevo y segunda mano</span
+            ><span class="text-ocre">●</span><span>Ferias de vinilo</span
+            ><span class="text-ocre">●</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!--Azulejos de género (VICKY)-->
+            <section
+        class="mx-auto flex max-w-6xl snap-x gap-4 overflow-x-auto px-5 pt-8 pb-10 md:grid md:grid-cols-3 md:overflow-visible lg:gap-5 lg:px-10 lg:pt-14 lg:pb-16"
+        aria-labelledby="titulo-generos"> 
+
+      <h2 id="titulo-generos" class="sr-only">Géneros</h2>
+
+        <a
+          href="#catalogo"
+          data-genero="rock"
+          data-aos="fade-up"
+          class="azulejo relative flex h-36 min-w-56 snap-start flex-col justify-between overflow-hidden rounded-2xl p-5 font-titulo text-3xl uppercase shadow-suave transition hover:-translate-y-1 focus-visible:-translate-y-1 md:min-w-0 lg:h-44 bg-rojo text-crema"
+        >
+          <span class="font-cuerpo text-sm font-bold">3 discos</span>
+          <span class="relative z-10">Rock</span>
+          <span class="vinilo absolute -right-8 -bottom-16 w-36"></span>
+        </a>
+
+        <a
+          href="#catalogo"
+          data-genero="indie"
+          data-aos="fade-up"
+          class="azulejo relative flex h-36 min-w-56 snap-start flex-col justify-between overflow-hidden rounded-2xl p-5 font-titulo text-3xl uppercase shadow-suave transition hover:-translate-y-1 focus-visible:-translate-y-1 md:min-w-0 lg:h-44 bg-ocre text-tinta"
+        >
+          <span class="font-cuerpo text-sm font-bold">3 discos</span>
+          <span class="relative z-10">Indie</span>
+          <span class="vinilo absolute -right-8 -bottom-16 w-36"></span>
+        </a>
+
+        <a
+          href="#catalogo"
+          data-genero="electronica"
+          data-aos="fade-up"
+          class="azulejo relative flex h-36 min-w-56 snap-start flex-col justify-between overflow-hidden rounded-2xl p-5 font-titulo text-3xl uppercase shadow-suave transition hover:-translate-y-1 focus-visible:-translate-y-1 md:min-w-0 lg:h-44 bg-tinta text-ocre dark:bg-crema dark:text-tinta"
+        >
+          <span class="font-cuerpo text-sm font-bold">3 discos</span>
+          <span class="relative z-10">Electrónica</span>
+          <span class="vinilo absolute -right-8 -bottom-16 w-36"></span>
+        </a>
+
+      </section>
       <!--PRODUCTOS: CATÁLOGO (VICKY)-->
+            <section id="catalogo" class="scroll-mt-20 bg-panel">
+        <div
+          class="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-12 lg:px-10 lg:py-20"
+        >
+          <header>
+            <p
+              class="text-xs font-extrabold tracking-[.14em] text-tenue uppercase"
+            >
+              Cara A · Pista 01
+            </p>
+            <h2
+              class="mt-2 font-titulo text-5xl text-rojo uppercase lg:text-6xl"
+            >
+              Catálogo
+            </h2>
+          </header>
+
+          <div class="flex gap-2 overflow-x-auto">
+            
+            <button
+              type="button"
+              class="filtro h-10 flex-none rounded-full bg-fondo px-4 text-sm font-bold transition-colors hover:bg-tarjeta focus-visible:bg-tarjeta aria-pressed:bg-rojo aria-pressed:text-crema"
+              data-genero="todos"
+              aria-pressed="true"
+            >
+              Todos
+            </button>
+
+            <button
+              type="button"
+              class="filtro h-10 flex-none rounded-full bg-fondo px-4 text-sm font-bold transition-colors hover:bg-tarjeta focus-visible:bg-tarjeta aria-pressed:bg-rojo aria-pressed:text-crema"
+              data-genero="rock"
+              aria-pressed="false"
+            >
+              Rock
+            </button>
+
+            <button
+              type="button"
+              class="filtro h-10 flex-none rounded-full bg-fondo px-4 text-sm font-bold transition-colors hover:bg-tarjeta focus-visible:bg-tarjeta aria-pressed:bg-rojo aria-pressed:text-crema"
+              data-genero="indie"
+              aria-pressed="false"
+            >
+              Indie
+            </button>
+
+            <button
+              type="button"
+              class="filtro h-10 flex-none rounded-full bg-fondo px-4 text-sm font-bold transition-colors hover:bg-tarjeta focus-visible:bg-tarjeta aria-pressed:bg-rojo aria-pressed:text-crema"
+              data-genero="electronica"
+              aria-pressed="false"
+            >
+              Electrónica
+            </button>
+            </div>
+
+             <div class="swiper catalogo w-full pb-12">
+            <div class="swiper-wrapper">
+              <article class="swiper-slide" data-genero="rock">
+                <div
+                  class="flex flex-col items-center gap-2 text-center transition-transform duration-300 hover:-translate-y-1.5"
+                >
+                  <div class="vinilo girar w-full max-w-[260px]">
+                    <span class="etiqueta bg-rojo text-crema"
+                      >Radio Futura</span
+                    >
+                  </div>
+                  <p class="mt-4 text-xs font-bold uppercase text-tenue">
+                    Radio Futura
+                  </p>
+                  <h3 class="font-titulo text-lg uppercase leading-tight">
+                    La ley del desierto
+                  </h3>
+                  <p class="text-sm font-bold">
+                    <span class="text-rojo">25 €</span> · Usado · VG+
+                  </p>
+                </div>
+              </article>
+              <article class="swiper-slide" data-genero="indie">
+                <div
+                  class="flex flex-col items-center gap-2 text-center transition-transform duration-300 hover:-translate-y-1.5"
+                >
+                  <div class="vinilo girar w-full max-w-[260px]">
+                    <span class="etiqueta bg-ocre text-tinta"
+                      >Los Planetas</span
+                    >
+                  </div>
+                  <p class="mt-4 text-xs font-bold uppercase text-tenue">
+                    Los Planetas
+                  </p>
+                  <h3 class="font-titulo text-lg uppercase leading-tight">
+                    Una semana en el motor de un autobús
+                  </h3>
+                  <p class="text-sm font-bold">
+                    <span class="text-rojo">28 €</span> · Nuevo
+                  </p>
+                </div>
+              </article>
+              <article class="swiper-slide" data-genero="electronica">
+                <div
+                  class="flex flex-col items-center gap-2 text-center transition-transform duration-300 hover:-translate-y-1.5"
+                >
+                  <div class="vinilo girar w-full max-w-[260px]">
+                    <span class="etiqueta bg-tinta text-ocre">Kraftwerk</span>
+                  </div>
+                  <p class="mt-4 text-xs font-bold uppercase text-tenue">
+                    Kraftwerk
+                  </p>
+                  <h3 class="font-titulo text-lg uppercase leading-tight">
+                    Computerwelt
+                  </h3>
+                  <p class="text-sm font-bold">
+                    <span class="text-rojo">30 €</span> · Usado · VG
+                  </p>
+                </div>
+              </article>
+              <article class="swiper-slide" data-genero="rock">
+                <div
+                  class="flex flex-col items-center gap-2 text-center transition-transform duration-300 hover:-translate-y-1.5"
+                >
+                  <div class="vinilo girar w-full max-w-[260px]">
+                    <span class="etiqueta bg-azul text-crema">David Bowie</span>
+                  </div>
+                  <p class="mt-4 text-xs font-bold uppercase text-tenue">
+                    David Bowie
+                  </p>
+                  <h3 class="font-titulo text-lg uppercase leading-tight">
+                    The Rise and Fall of Ziggy Stardust
+                  </h3>
+                  <p class="text-sm font-bold">
+                    <span class="text-rojo">45 €</span> · Usado · VG+
+                  </p>
+                </div>
+              </article>
+              <article class="swiper-slide" data-genero="electronica">
+                <div
+                  class="flex flex-col items-center gap-2 text-center transition-transform duration-300 hover:-translate-y-1.5"
+                >
+                  <div class="vinilo girar w-full max-w-[260px]">
+                    <span class="etiqueta bg-crema text-rojo">Daft Punk</span>
+                  </div>
+                  <p class="mt-4 text-xs font-bold uppercase text-tenue">
+                    Daft Punk
+                  </p>
+                  <h3 class="font-titulo text-lg uppercase leading-tight">
+                    Homework
+                  </h3>
+                  <p class="text-sm font-bold">
+                    <span class="text-rojo">32 €</span> · Nuevo
+                  </p>
+                </div>
+              </article>
+              <article class="swiper-slide" data-genero="indie">
+                <div
+                  class="flex flex-col items-center gap-2 text-center transition-transform duration-300 hover:-translate-y-1.5"
+                >
+                  <div class="vinilo girar w-full max-w-[260px]">
+                    <span class="etiqueta bg-tinta text-crema"
+                      >Joy Division</span
+                    >
+                  </div>
+                  <p class="mt-4 text-xs font-bold uppercase text-tenue">
+                    Joy Division
+                  </p>
+                  <h3 class="font-titulo text-lg uppercase leading-tight">
+                    Unknown Pleasures
+                  </h3>
+                  <p class="text-sm font-bold">
+                    <span class="text-rojo">27 €</span> · Nuevo
+                  </p>
+                </div>
+              </article>
+              <article class="swiper-slide" data-genero="rock">
+                <div
+                  class="flex flex-col items-center gap-2 text-center transition-transform duration-300 hover:-translate-y-1.5"
+                >
+                  <div class="vinilo girar w-full max-w-[260px]">
+                    <span class="etiqueta bg-ocre text-tinta"
+                      >Alaska y Dinarama</span
+                    >
+                  </div>
+                  <p class="mt-4 text-xs font-bold uppercase text-tenue">
+                    Alaska y Dinarama
+                  </p>
+                  <h3 class="font-titulo text-lg uppercase leading-tight">
+                    Deseo carnal
+                  </h3>
+                  <p class="text-sm font-bold">
+                    <span class="text-rojo">15 €</span> · Usado · VG
+                  </p>
+                </div>
+              </article>
+              <article class="swiper-slide" data-genero="electronica">
+                <div
+                  class="flex flex-col items-center gap-2 text-center transition-transform duration-300 hover:-translate-y-1.5"
+                >
+                  <div class="vinilo girar w-full max-w-[260px]">
+                    <span class="etiqueta bg-verde text-crema">Aphex Twin</span>
+                  </div>
+                  <p class="mt-4 text-xs font-bold uppercase text-tenue">
+                    Aphex Twin
+                  </p>
+                  <h3 class="font-titulo text-lg uppercase leading-tight">
+                    Selected Ambient Works 85–92
+                  </h3>
+                  <p class="text-sm font-bold">
+                    <span class="text-rojo">34 €</span> · Nuevo
+                  </p>
+                </div>
+              </article>
+              <article class="swiper-slide" data-genero="indie">
+                <div
+                  class="flex flex-col items-center gap-2 text-center transition-transform duration-300 hover:-translate-y-1.5"
+                >
+                  <div class="vinilo girar w-full max-w-[260px]">
+                    <span class="etiqueta bg-rojo text-tinta">Pixies</span>
+                  </div>
+                  <p class="mt-4 text-xs font-bold uppercase text-tenue">
+                    Pixies
+                  </p>
+                  <h3 class="font-titulo text-lg uppercase leading-tight">
+                    Doolittle
+                  </h3>
+                  <p class="text-sm font-bold">
+                    <span class="text-rojo">29 €</span> · Nuevo
+                  </p>
+                </div>
+              </article>
+            </div>
+            <!--Controles para el carrousel-->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+            </section>
 
       <!--HORARIO Y UBICACIÓN: LA TIENDA (SERGIO)-->
 
