@@ -143,6 +143,15 @@
   --swiper-pagination-bullet-inactive-color: var(--color-tenue);
 }
 
+@media (min-width: 1024px) {
+  .swiper.catalogo {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: 0;
+    overflow: visible;
+  }
+}
+
 /* (Seguramente falte AOS)*/
 [data-aos][data-aos].transition {
   transition-property: opacity, transform, translate;
