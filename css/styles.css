@@ -82,6 +82,20 @@
   }
 
   /*Animaciones*/
+
+  .casete {
+    clip-path: inset(3% 2.4% 3.6% 2.4% round 3%);
+  }
+
+  .trama {
+    background-image: radial-gradient(
+      var(--color-sombra) 1.2px,
+      transparent 1.7px
+    );
+    background-size: 14px 14px;
+    mask-image: radial-gradient(ellipse at 78% 42%, #000, transparent 62%);
+  }
+
   .girar {
     animation: girar 4s linear infinite;
   }
