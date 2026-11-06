@@ -34,9 +34,6 @@
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
     />
 
-    <!--CSS propio-->
-    <link rel="stylesheet" href="css/styles.css" />
-
     <!--Tailwind desde el CDN-->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -71,13 +68,200 @@
         --shadow-suave: 5px 5px 20px var(--color-sombra);
       }
     </style>
+
+    <!--CSS propio-->
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body class="bg-fondo font-cuerpo text-texto">
     <!--CABECERA (SOFI)-->
+    <header class="sticky top-0 z-30 bg-fondo">
+      <div class="mx-auto flex max-w-6xl items-center gap-4 px-5 py-3 lg:px-10">
+        <a
+          href="#inicio"
+          class="rounded-xl bg-papel px-3 py-1 shadow-suave transition hover:scale-105 focus-visible:scale-105"
+        >
+          <img
+            src="img/ziggy-logo.webp"
+            alt="Ziggy Discos"
+            width="400"
+            height="158"
+            class="h-11 w-auto"
+          />
+        </a>
+
+        <nav
+          class="ml-auto hidden items-center gap-1 md:flex"
+          aria-label="Principal"
+        >
+          <a
+            href="#catalogo"
+            class="px-3.5 py-2.5 font-extrabold text-texto hover:text-rojo focus-visible:text-rojo"
+            >Catálogo</a
+          >
+          <a
+            href="#tienda"
+            class="px-3.5 py-2.5 font-extrabold text-texto hover:text-rojo focus-visible:text-rojo"
+            >Tienda</a
+          >
+          <a
+            href="#ferias"
+            class="px-3.5 py-2.5 font-extrabold text-texto hover:text-rojo focus-visible:text-rojo"
+            >Ferias</a
+          >
+          <a
+            href="https://instagram.com/ziggydiscos"
+            target="_blank"
+            rel="noopener"
+            class="px-3.5 py-2.5 font-extrabold text-rojo hover:text-rojo-oscuro focus-visible:text-rojo-oscuro"
+            >@ziggydiscos</a
+          >
+        </nav>
+
+        <button
+          id="boton-tema"
+          type="button"
+          aria-label="Cambiar modo claro u oscuro"
+          class="ml-auto flex size-11 items-center justify-center rounded-full bg-tarjeta text-texto shadow-suave transition hover:scale-105 focus-visible:scale-105 md:ml-2"
+        >
+          <svg
+            class="dark:hidden"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.4"
+            stroke-linejoin="round"
+          >
+            <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" />
+          </svg>
+          <svg
+            class="hidden dark:block"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.4"
+            stroke-linecap="round"
+          >
+            <circle cx="12" cy="12" r="4.5" />
+            <path
+              d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"
+            />
+          </svg>
+        </button>
+
+        <button
+          id="boton-menu"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="menu"
+          class="group flex size-11 flex-col items-center justify-center gap-1.5 rounded-xl bg-tarjeta text-texto shadow-suave transition-colors hover:text-rojo focus-visible:text-rojo aria-expanded:bg-rojo aria-expanded:text-crema md:hidden"
+        >
+          <span
+            class="h-[3px] w-5 rounded-sm bg-current transition-transform group-aria-expanded:translate-y-[9px] group-aria-expanded:rotate-45"
+          ></span>
+          <span
+            class="h-[3px] w-5 rounded-sm bg-current transition-opacity group-aria-expanded:opacity-0"
+          ></span>
+          <span
+            class="h-[3px] w-5 rounded-sm bg-current transition-transform group-aria-expanded:-translate-y-[9px] group-aria-expanded:-rotate-45"
+          ></span>
+        </button>
+      </div>
+    </header>
+
+    <nav
+      id="menu"
+      class="hidden bg-tarjeta px-5 pt-2 pb-5 md:hidden"
+      aria-label="Menú móvil"
+    >
+      <a
+        href="#catalogo"
+        class="block py-3 font-titulo text-2xl uppercase text-texto hover:text-rojo focus-visible:text-rojo"
+        >Catálogo</a
+      >
+      <a
+        href="#tienda"
+        class="block py-3 font-titulo text-2xl uppercase text-texto hover:text-rojo focus-visible:text-rojo"
+        >Tienda</a
+      >
+      <a
+        href="#ferias"
+        class="block py-3 font-titulo text-2xl uppercase text-texto hover:text-rojo focus-visible:text-rojo"
+        >Ferias</a
+      >
+      <a
+        href="https://instagram.com/ziggydiscos"
+        target="_blank"
+        rel="noopener"
+        class="block pt-4 font-extrabold text-rojo"
+        >@ziggydiscos</a
+      >
+    </nav>
 
     <main class="bg-fondo">
       <!--PORTADA (SOFI)-->
+      <section id="inicio" class="relative overflow-hidden">
+        <div class="trama pointer-events-none absolute inset-0"></div>
+        <div
+          class="relative mx-auto grid max-w-6xl items-center gap-10 px-5 pt-6 pb-12 md:grid-cols-2 md:pt-12 lg:gap-16 lg:px-10 lg:pb-20"
+        >
+          <div class="flex flex-col items-start gap-5 lg:gap-6">
+            <h1
+              class="font-titulo text-[40px] leading-[.94] text-balance uppercase sm:text-6xl lg:text-8xl"
+            >
+              Tienda de <span class="text-rojo">discos</span> en La Latina
+            </h1>
+            <p
+              class="max-w-md text-base leading-relaxed font-medium text-pretty text-tenue lg:text-lg"
+            >
+              Vinilos nuevos y de segunda mano en el centro de Madrid. Rock,
+              indie, electrónica y pop español de los 80, en cajones que se
+              renuevan cada día.
+            </p>
+            <div class="flex w-full max-w-md flex-wrap gap-3">
+              <a
+                href="#catalogo"
+                class="flex h-14 flex-1 basis-36 items-center justify-center gap-2.5 rounded-xl bg-rojo px-6 font-extrabold whitespace-nowrap text-crema shadow-suave transition hover:-translate-y-0.5 focus-visible:-translate-y-0.5 hover:bg-rojo-oscuro focus-visible:bg-rojo-oscuro"
+                >Ver catálogo <span class="text-xl">→</span></a
+              >
+              <a
+                href="https://maps.google.com/?q=Calle+de+los+Estudios+6+Madrid"
+                target="_blank"
+                rel="noopener"
+                class="flex h-14 flex-1 basis-32 items-center justify-center rounded-xl bg-texto px-6 font-extrabold text-fondo shadow-suave transition hover:-translate-y-0.5 focus-visible:-translate-y-0.5"
+                >Cómo llegar</a
+              >
+            </div>
+            <p class="text-sm font-semibold text-tenue">
+              C. de los Estudios, 6 · Metro La Latina (L5)
+            </p>
+          </div>
+
+          <div class="relative mx-auto aspect-[10/9] w-full max-w-xl">
+            <div class="entra-disco absolute top-0 right-0 w-[64%]">
+              <div class="vinilo girar">
+                <span
+                  class="etiqueta items-start bg-rojo pt-[14%] text-base text-crema sm:text-xl"
+                  >Ziggy</span
+                >
+              </div>
+            </div>
+            <img
+              src="img/cassette-ziggy.webp"
+              alt="Casete de Ziggy Discos"
+              width="1200"
+              height="780"
+              fetchpriority="high"
+              class="casete absolute bottom-0 left-0 w-[88%] drop-shadow-2xl"
+            />
+          </div>
+        </div>
+      </section>
 
       <!--Cinta de géneros (VICKY)-->
 
