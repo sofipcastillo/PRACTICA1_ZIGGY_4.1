@@ -6,6 +6,12 @@ $(function () {
   //-jQuery: filtro por género-
 
   //-jQuery: botón "Me apunto" de las ferias-
+  
+   $(".apuntarse").on("click", function () {
+    const apuntado = $(this).attr("aria-pressed") === "true";
+    $(this).attr("aria-pressed", !apuntado);
+    $(this).text(apuntado ? "Me apunto" : "✓ Apuntado");
+  });
 
   //-AOS (animaciones al hacer scroll)-
 
