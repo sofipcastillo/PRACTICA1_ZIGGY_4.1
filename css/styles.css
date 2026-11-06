@@ -130,3 +130,14 @@
 }
 
 /* (Seguramente falte AOS)*/
+[data-aos][data-aos].transition {
+  transition-property: opacity, transform, translate;
+  transition-duration: 700ms, 700ms, 150ms;
+}
+
+[data-aos][data-aos][data-aos-delay="100"].transition {
+  transition-delay: 100ms, 100ms, 0s;
+}
+[data-aos][data-aos][data-aos-delay="200"].transition {
+  transition-delay: 200ms, 200ms, 0s;
+}
