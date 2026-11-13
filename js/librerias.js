@@ -3,7 +3,7 @@
 $(function () {
   //-Swiper: carrusel de discos del catálogo-
 
-    const carrusel = new Swiper(".catalogo", {
+  const carrusel = new Swiper(".catalogo", {
     effect: "coverflow",
     centeredSlides: true,
     grabCursor: true,
@@ -42,15 +42,14 @@ $(function () {
     carrusel.slideTo(0, 0);
   });
 
-    // Azulejos activan filtro correspondiente
+  // Azulejos activan filtro correspondiente
   $(".azulejo").on("click", function () {
     $('.filtro[data-genero="' + $(this).data("genero") + '"]').trigger("click");
   });
 
-
   //-jQuery: botón "Me apunto" de las ferias-
-  
-   $(".apuntarse").on("click", function () {
+
+  $(".apuntarse").on("click", function () {
     const apuntado = $(this).attr("aria-pressed") === "true";
     $(this).attr("aria-pressed", !apuntado);
     $(this).text(apuntado ? "Me apunto" : "✓ Apuntado");
