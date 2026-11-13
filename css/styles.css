@@ -152,6 +152,13 @@
   }
 }
 
+@media (max-width: 767px) {
+  .catalogo .swiper-button-prev,
+  .catalogo .swiper-button-next {
+    display: none;
+  }
+}
+
 /* (Seguramente falte AOS)*/
 [data-aos][data-aos].transition {
   transition-property: opacity, transform, translate;
